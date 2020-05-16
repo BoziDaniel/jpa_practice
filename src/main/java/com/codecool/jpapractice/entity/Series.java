@@ -1,14 +1,9 @@
 package com.codecool.jpapractice.entity;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Data
@@ -23,5 +18,8 @@ public class Series {
 
     private String name;
 
-    //private List<Season> seasons;
+    @Singular
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "series", cascade = {CascadeType.PERSIST})
+    private List<Season> seasons;
 }

@@ -16,15 +16,15 @@ public class Episode {
     @GeneratedValue
     private Long id;
 
-    private String Title;
+    private String title;
 
     @ElementCollection
     @Singular
     private List<String> actors;
 
     private int episodeNumberInSeason;
-
-  //  private Season season;
+    @ManyToOne
+    private Season season;
 
     private String description;
 

@@ -1,10 +1,7 @@
 package com.codecool.jpapractice.entity;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -22,11 +19,13 @@ public class Episode {
     private String Title;
 
     @ElementCollection
+    @Singular
     private List<String> actors;
 
     private int episodeNumberInSeason;
 
   //  private Season season;
+
     private String description;
 
     @Enumerated(EnumType.STRING)

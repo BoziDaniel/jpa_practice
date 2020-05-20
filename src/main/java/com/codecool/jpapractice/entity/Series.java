@@ -18,8 +18,16 @@ public class Series {
 
     private String name;
 
+    @Transient
+    private int numberOfSeasons;
+
     @Singular
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "series", cascade = {CascadeType.PERSIST})
     private List<Season> seasons;
+
+
+    public void countNumberOfSeasons() {
+        this.numberOfSeasons = seasons.size();
+    }
 }

@@ -31,6 +31,5 @@ public class Episode {
     @Enumerated(EnumType.STRING)
     private FilmingLocation location;
 
-    @Transient
-    private int episodeNumberInSeries;
+
 }

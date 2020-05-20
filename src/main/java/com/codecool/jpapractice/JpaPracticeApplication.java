@@ -40,7 +40,6 @@ public class JpaPracticeApplication {
                     .description("show starts")
                     .location(FilmingLocation.FILMORE)
                     .episodeNumberInSeason(1)
-                    .episodeNumberInSeries(1)
                     .title("s01e01")
                     .build();
             Episode episode_2 = Episode.builder()
@@ -49,7 +48,6 @@ public class JpaPracticeApplication {
                     .location(FilmingLocation.PASADENA)
                     .episodeNumberInSeason(2)
                     .title("s01e02")
-                    .episodeNumberInSeries(2)
                     .build();
             Episode episode_3 = Episode.builder()
                     .actors(Arrays.asList("john", "jane"))
@@ -57,7 +55,6 @@ public class JpaPracticeApplication {
                     .location(FilmingLocation.PASADENA)
                     .episodeNumberInSeason(1)
                     .title("s02e01")
-                    .episodeNumberInSeries(1)
                     .build();
             Season season_1 = Season.builder()
                     .seasonNumber(1)
